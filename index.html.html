@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abacus do Michel</title>
+    <link rel="stylesheet" href="abacus.css">
+</head>
+<body>
+    <article>
+        <div id="contas">
+            <h1 id="conta"></h1>
+        </div>
+        <div id="abacus">
+            <div class="abaco">
+                <div class="linhaH"></div>
+                <input class="pedra" id="peT" type="button" onclick="MoverPedraE('T')">
+                <div id="p0T" class="linhaH"></div>
+                <input class="pedra" id="p1T" type="button" onclick="MoverPedra(1, 'T')">
+                <input class="pedra" id="p2T" type="button" onclick="MoverPedra(2, 'T')">
+                <input class="pedra" id="p3T" type="button" onclick="MoverPedra(3, 'T')">
+                <input class="pedra" id="p4T" type="button" onclick="MoverPedra(4, 'T')">
+                <div id="p5T" class="linhaH"></div>
+                <h1 id="valorT">0</h1>
+            </div>
+
+            <div class="abaco">
+                <div class="linhaH"></div>
+                <input class="pedra" id="peB" type="button" onclick="MoverPedraE('B')">
+                <div id="p0B" class="linhaH"></div>
+                <input class="pedra" id="p1B" type="button" onclick="MoverPedra(1, 'B')">
+                <input class="pedra" id="p2B" type="button" onclick="MoverPedra(2, 'B')">
+                <input class="pedra" id="p3B" type="button" onclick="MoverPedra(3, 'B')">
+                <input class="pedra" id="p4B" type="button" onclick="MoverPedra(4, 'B')">
+                <div id="p5B" class="linhaH"></div>
+                <h1 id="valorB">0</h1>
+            </div>
+
+            <div class="abaco">
+                <div class="linhaH"></div>
+                <input class="pedra" id="peM" type="button" onclick="MoverPedraE('M')">
+                <div id="p0M" class="linhaH"></div>
+                <input class="pedra" id="p1M" type="button" onclick="MoverPedra(1, 'M')">
+                <input class="pedra" id="p2M" type="button" onclick="MoverPedra(2, 'M')">
+                <input class="pedra" id="p3M" type="button" onclick="MoverPedra(3, 'M')">
+                <input class="pedra" id="p4M" type="button" onclick="MoverPedra(4, 'M')">
+                <div id="p5M" class="linhaH"></div>
+                <h1 id="valorM">0</h1>
+            </div>
+
+            <div class="abaco">
+                <div class="linhaH"></div>
+                <input class="pedra" id="peK" type="button" onclick="MoverPedraE('K')">
+                <div id="p0K" class="linhaH"></div>
+                <input class="pedra" id="p1K" type="button" onclick="MoverPedra(1, 'K')">
+                <input class="pedra" id="p2K" type="button" onclick="MoverPedra(2, 'K')">
+                <input class="pedra" id="p3K" type="button" onclick="MoverPedra(3, 'K')">
+                <input class="pedra" id="p4K" type="button" onclick="MoverPedra(4, 'K')">
+                <div id="p5K" class="linhaH"></div>
+                <h1 id="valorK">0</h1>
+            </div>
+
+            <div class="abaco">
+                <div class="linhaH"></div>
+                <input class="pedra" id="peC" type="button" onclick="MoverPedraE('C')">
+                <div id="p0C" class="linhaH"></div>
+                <input class="pedra" id="p1C" type="button" onclick="MoverPedra(1, 'C')">
+                <input class="pedra" id="p2C" type="button" onclick="MoverPedra(2, 'C')">
+                <input class="pedra" id="p3C" type="button" onclick="MoverPedra(3, 'C')">
+                <input class="pedra" id="p4C" type="button" onclick="MoverPedra(4, 'C')">
+                <div id="p5C" class="linhaH"></div>
+                <h1 id="valorC">0</h1>
+            </div>
+        
+            <div class="abaco">
+                <div class="linhaH"></div>
+                <input class="pedra pedrasE" id="peD" type="button" onclick="MoverPedraE('D')">
+                <div id="p0D" class="linhaH"></div>
+                <input class="pedra" id="p1D" type="button" onclick="MoverPedra(1, 'D')">
+                <input class="pedra" id="p2D" type="button" onclick="MoverPedra(2, 'D')">
+                <input class="pedra" id="p3D" type="button" onclick="MoverPedra(3, 'D')">
+                <input class="pedra" id="p4D" type="button" onclick="MoverPedra(4, 'D')">
+                <div id="p5D" class="linhaH"></div>
+                <h1 id="valorD">0</h1>
+            </div>
+        
+            <div class="abaco">
+                <div class="linhaH"></div>
+                <input class="pedra" id="peU" type="button" onclick="MoverPedraE('U')">
+                <div id="p0U" class="linhaH"></div>
+                <input class="pedra" id="p1U" type="button" onclick="MoverPedra(1, 'U')">
+                <input class="pedra" id="p2U" type="button" onclick="MoverPedra(2, 'U')">
+                <input class="pedra" id="p3U" type="button" onclick="MoverPedra(3, 'U')">
+                <input class="pedra" id="p4U" type="button" onclick="MoverPedra(4, 'U')">
+                <div id="p5U" class="linhaH"></div>
+                <h1 id="valorU">0</h1>
+            </div>
+        </div>
+    </article>
+    <menu>
+        <input type="button" value="Menu" id="menu">
+        <input type="button" value="Terciario" class="terciario">
+        <input type="button" value="Terciario" class="terciario">
+        <input type="button" value="Terciario" class="terciario">
+        <input type="button" value="Próximo" id="proximo" onclick="location.reload()">
+    </menu>
+    <script src="abacus.js"></script>
+</body>
+</html>
