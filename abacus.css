@@ -19,6 +19,11 @@ article {
     padding: 1vw;
 }
 
+footer {
+    text-align: center;
+    font-size: 1vw;
+}
+
 div#contas {
     border: 1px, solid, black;
     background-color: var(--cor2);

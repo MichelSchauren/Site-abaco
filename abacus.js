@@ -1,42 +1,11 @@
 //Pedras Expeciais:
-let pedraET = document.getElementById('peT')
-let pedraEB = document.getElementById('peB')
-let pedraEM = document.getElementById('peM')
-let pedraEK = document.getElementById('peK')
-let pedraEC = document.getElementById('peC')
-let pedraED = document.getElementById('peD')
-let pedraEU = document.getElementById('peU')
+let pedrasE = document.getElementsByClassName('pE')
+for (let i = 0; i < pedrasE.length; i++) {
+    pedrasE[i].style.marginBottom = '4vw'}
 //Pedras Normais:
-let pedraT = document.getElementById('p1T')
-let pedraB = document.getElementById('p1B')
-let pedraM = document.getElementById('p1M')
-let pedraK = document.getElementById('p1K')
-let pedraC = document.getElementById('p1C')
-let pedraD = document.getElementById('p1D')
-let pedraU = document.getElementById('p1U')
-//Colocar margin nessas pedras:
-pedraET.style.marginBottom = '4vw'
-pedraEB.style.marginBottom = '4vw'
-pedraEM.style.marginBottom = '4vw'
-pedraEK.style.marginBottom = '4vw'
-pedraEC.style.marginBottom = '4vw'
-pedraED.style.marginBottom = '4vw'
-pedraEU.style.marginBottom = '4vw'
-pedraT.style.marginTop = '4vw'
-pedraB.style.marginTop = '4vw'
-pedraM.style.marginTop = '4vw'
-pedraK.style.marginTop = '4vw'
-pedraC.style.marginTop = '4vw'
-pedraD.style.marginTop = '4vw'
-pedraU.style.marginTop = '4vw'
-//Valores:
-let valorT = document.getElementById(`valorT`)
-let valorB = document.getElementById(`valorB`)
-let valorM = document.getElementById(`valorM`)
-let valorK = document.getElementById(`valorK`)
-let valorC = document.getElementById(`valorC`)
-let valorD = document.getElementById(`valorD`)
-let valorU = document.getElementById(`valorU`)
+let pedras1 = document.getElementsByClassName('p1')
+for (let i = 0; i < pedras1.length; i++) {
+    pedras1[i].style.marginTop = '4vw'}
 
 function MoverPedraE(x) {
     let valor = document.getElementById(`valor${x}`)
@@ -87,11 +56,14 @@ num1 = Math.floor(Math.random()*1000)
 num2 = Math.floor(Math.random()*1000)
 num3 = Math.floor(Math.random()*1000)
 let result = num1 + num2 + num3
-cont.innerHTML = `${num1} + ${num2} + ${num3}`
+cont.innerHTML = `${num1} + ${num2} + ${num3} = ${result}`
 
 function VerificarResult() {
-    let r = Number(`${valorT.innerHTML}${valorB.innerHTML}${valorM.innerHTML}${valorK.innerHTML}${valorC.innerHTML}${valorD.innerHTML}${valorU.innerHTML}`)
-
+    let valor = document.getElementsByClassName('valor')
+    let r = ''
+    for (let i = 0; i < valor.length; i++) {
+        r = `${Number(r)}${valor[i].innerHTML}`
+    }
     if (r == result) {
         cont.innerHTML = 'Parabéns'
     }
