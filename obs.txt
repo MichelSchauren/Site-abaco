@@ -1,0 +1,13 @@
+Menu:
+    -modo livre
+    -modo de tempo
+
+Modo livre:
+    -Referência.*
+    -Botão que muda a quantidade de numeros.*
+    -Botão que muda a quantidade de algarismos por numero.*
+    -Botão que muda a operação.*
+    -escurecer o botão de proximo durante a conta.*
+    -dinamizar o código JS.*
+    -favicon.*
+    -Deixar mais bonito.*

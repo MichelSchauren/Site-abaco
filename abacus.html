@@ -21,7 +21,7 @@
                 <input class="pedra" id="p2T" type="button" onclick="MoverPedra(2, 'T')">
                 <input class="pedra" id="p3T" type="button" onclick="MoverPedra(3, 'T')">
                 <input class="pedra" id="p4T" type="button" onclick="MoverPedra(4, 'T')">
-                <div id="p5T" class="linhaH"></div>
+                <div id="p5T" class="linhaH pedra"></div>
                 <h1 class="valor" id="valorT">0</h1>
             </div>
 
@@ -33,7 +33,7 @@
                 <input class="pedra" id="p2B" type="button" onclick="MoverPedra(2, 'B')">
                 <input class="pedra" id="p3B" type="button" onclick="MoverPedra(3, 'B')">
                 <input class="pedra" id="p4B" type="button" onclick="MoverPedra(4, 'B')">
-                <div id="p5B" class="linhaH"></div>
+                <div id="p5B" class="linhaH pedra"></div>
                 <h1 class="valor" id="valorB">0</h1>
             </div>
 
@@ -45,7 +45,7 @@
                 <input class="pedra" id="p2M" type="button" onclick="MoverPedra(2, 'M')">
                 <input class="pedra" id="p3M" type="button" onclick="MoverPedra(3, 'M')">
                 <input class="pedra" id="p4M" type="button" onclick="MoverPedra(4, 'M')">
-                <div id="p5M" class="linhaH"></div>
+                <div id="p5M" class="linhaH pedra"></div>
                 <h1 class="valor" id="valorM">0</h1>
             </div>
 
@@ -57,7 +57,7 @@
                 <input class="pedra" id="p2K" type="button" onclick="MoverPedra(2, 'K')">
                 <input class="pedra" id="p3K" type="button" onclick="MoverPedra(3, 'K')">
                 <input class="pedra" id="p4K" type="button" onclick="MoverPedra(4, 'K')">
-                <div id="p5K" class="linhaH"></div>
+                <div id="p5K" class="linhaH pedra"></div>
                 <h1 class="valor" id="valorK">0</h1>
             </div>
 
@@ -69,7 +69,7 @@
                 <input class="pedra" id="p2C" type="button" onclick="MoverPedra(2, 'C')">
                 <input class="pedra" id="p3C" type="button" onclick="MoverPedra(3, 'C')">
                 <input class="pedra" id="p4C" type="button" onclick="MoverPedra(4, 'C')">
-                <div id="p5C" class="linhaH"></div>
+                <div id="p5C" class="linhaH pedra"></div>
                 <h1 class="valor" id="valorC">0</h1>
             </div>
         
@@ -81,7 +81,7 @@
                 <input class="pedra" id="p2D" type="button" onclick="MoverPedra(2, 'D')">
                 <input class="pedra" id="p3D" type="button" onclick="MoverPedra(3, 'D')">
                 <input class="pedra" id="p4D" type="button" onclick="MoverPedra(4, 'D')">
-                <div id="p5D" class="linhaH"></div>
+                <div id="p5D" class="linhaH pedra"></div>
                 <h1 class="valor" id="valorD">0</h1>
             </div>
         
@@ -93,18 +93,18 @@
                 <input class="pedra" id="p2U" type="button" onclick="MoverPedra(2, 'U')">
                 <input class="pedra" id="p3U" type="button" onclick="MoverPedra(3, 'U')">
                 <input class="pedra" id="p4U" type="button" onclick="MoverPedra(4, 'U')">
-                <div id="p5U" class="linhaH"></div>
+                <div id="p5U" class="linhaH pedra"></div>
                 <h1 class="valor" id="valorU">0</h1>
             </div>
         </div>
     </article>
     <menu>
         <footer>@MichelNathanSchauren</footer>
-        <input type="button" value="Menu" id="menu">
-        <input type="button" value="3 Números" class="terciario">
-        <input type="button" value="Fácil" class="terciario">
-        <input type="button" value="Adição" class="terciario">
-        <input type="button" value="Próximo" id="proximo" onclick="location.reload()">
+        <input type="button" value="Menu" class="terciario" id="menu" onclick="Menu()" onmouseenter="EntrarTerciario(1)" onmouseleave="SairTerciario(1)">
+        <input type="button" value="2 Números" class="terciario" id="quanNum" onclick="QuantidadeNumeros()" onmouseenter="EntrarTerciario(2)" onmouseleave="SairTerciario(2)">
+        <input type="button" value="Super Fácil" class="terciario" id="dificult" onclick="Dificuldade()" onmouseenter="EntrarTerciario(3)" onmouseleave="SairTerciario(3)">
+        <input type="button" value="Adição" class="terciario" id="oper" onclick="Operação()" onmouseenter="EntrarTerciario(4)" onmouseleave="SairTerciario(4)">
+        <input type="button" value="Próximo >" id="proximo" onclick="Reset(d+2, y, z)">
     </menu>
     <script src="abacus.js"></script>
 </body>
